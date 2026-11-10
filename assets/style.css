@@ -188,6 +188,8 @@ h1, h2, .hero-sub, .lede, .hero-lede { text-wrap: balance; }
 .legal-table th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 600; }
 .consent-text a { white-space: nowrap; }
 
+.install-ctas { margin-top: 40px; }
+
 /* Footer */
 .footer { background: var(--bg-alt); border-top: 1px solid var(--line); padding: 24px 0 40px; }
 .footer .contact { font-size: 14px; color: var(--text); margin-bottom: 14px; }

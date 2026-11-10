@@ -80,6 +80,8 @@
         "description": "Superbar is a Windows 7 style taskbar for Mac: a Start menu with search, one button per app, live window previews, window snapping, auto-hide, a system tray, and a clock on every display. A Dock alternative for macOS 26 or later.",
         "applicationCategory": "UtilitiesApplication",
         "applicationSubCategory": "Taskbar and Dock replacement",
+        "sameAs": ["https://github.com/iMahesh/superbar"],
+        "isAccessibleForFree": true,
         "operatingSystem": "macOS 26 or later",
         "image": "https://superbar.cc/assets/img/icon-512.png",
         "screenshot": [
@@ -181,10 +183,10 @@
       },
       {
         "@type": "Question",
-        "name": "When can I get Superbar?",
+        "name": "How do I install Superbar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Superbar is coming soon. Email hello@superbar.cc to get early access."
+          "text": "You can build it today from the source on GitHub with Apple's command line tools: see Install above. It's free for personal use. A ready-to-install app is coming later; email hello@superbar.cc to hear when it ships."
         }
       }
     ]
@@ -208,7 +210,7 @@
         <a href="#tray">Tray</a>
         <a href="#permissions">Privacy</a>
         <a href="#faq">FAQ</a>
-        <a class="nav-cta" href="#install">Early access</a>
+        <a class="nav-cta" href="#install">Install</a>
       </nav>
     </div>
   </header>
@@ -220,7 +222,7 @@
         <h1>Superbar <span class="hero-sub">The taskbar your Mac never had.</span></h1>
         <p class="hero-lede">A Windows-style taskbar for macOS: a Start menu that searches as you type, one button per app with window previews, snapping, a tray, and a clock. Along the bottom of every display.</p>
         <div class="ctas">
-          <a class="btn" href="#install">Get early access</a>
+          <a class="btn" href="#install">Install from GitHub</a>
           <a class="more-link" href="#start">See the features</a>
           <a class="more-link" id="repo-link" href="#" hidden>View on GitHub</a>
         </div>
@@ -485,8 +487,8 @@
             <p>Accessibility, to list and manage windows. Screen Recording is optional and only draws preview thumbnails. Automation lets the Start menu restart or shut down your Mac and open Finder&#x27;s Trash. Superbar keeps working without each one.</p>
           </details>
           <details class="faq-item">
-            <summary>When can I get Superbar?</summary>
-            <p>Superbar is coming soon. Email <a href="mailto:hello@superbar.cc">hello@superbar.cc</a> to get early access.</p>
+            <summary>How do I install Superbar?</summary>
+            <p>You can build it today from the <a href="https://github.com/iMahesh/superbar">source on GitHub</a> with Apple’s command line tools: see <a href="#install">Install</a>. It’s free for personal use. A ready-to-install app is coming later; email <a href="mailto:hello@superbar.cc">hello@superbar.cc</a> to hear when it ships.</p>
           </details>
         </div>
       </div>
@@ -495,14 +497,29 @@
     <section class="band" id="install" aria-labelledby="install-title">
       <div class="wrap">
         <header class="band-head">
-          <p class="eyebrow">Coming soon</p>
-          <h2 id="install-title">Get early access.</h2>
-          <p class="lede">Superbar is almost ready for your Mac. Email us to get early access and hear when it ships.</p>
+          <p class="eyebrow">Install</p>
+          <h2 id="install-title">Build it from GitHub.</h2>
+          <p class="lede">Superbar is free for personal use, and you can build it today in about a minute. You need a Mac on macOS 26 or later and Apple’s command line tools (Xcode works too).</p>
         </header>
-        <div class="ctas">
-          <a class="btn" href="mailto:hello@superbar.cc?subject=Superbar%20early%20access">Email hello@superbar.cc</a>
+        <ol class="steps">
+          <li>
+            <p>Install Apple’s command line tools, if you don’t have them.</p>
+            <div class="code"><code>xcode-select --install</code><button class="copy" data-copy="xcode-select --install">Copy</button></div>
+          </li>
+          <li>
+            <p>Download the source from GitHub.</p>
+            <div class="code"><code>git clone https://github.com/iMahesh/superbar.git</code><button class="copy" data-copy="git clone https://github.com/iMahesh/superbar.git">Copy</button></div>
+          </li>
+          <li>
+            <p>Build Superbar, install it to <code>~/Applications</code>, and open it.</p>
+            <div class="code"><code>cd superbar &amp;&amp; ./build.sh --open</code><button class="copy" data-copy="cd superbar &amp;&amp; ./build.sh --open">Copy</button></div>
+          </li>
+          <li><p>Grant Accessibility when Superbar asks. Each row in Settings turns On within a few seconds.</p></li>
+        </ol>
+        <div class="ctas install-ctas">
+          <a class="btn" href="https://github.com/iMahesh/superbar">View on GitHub</a>
         </div>
-        <p class="note-center">Superbar runs on macOS 26 or later.</p>
+        <p class="note-center">A ready-to-install app is coming later. Want to hear when it ships? Email <a href="mailto:hello@superbar.cc?subject=Superbar%20app%20release">hello@superbar.cc</a>.</p>
       </div>
     </section>
   </main>

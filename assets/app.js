@@ -4,7 +4,7 @@
   'use strict';
 
   // Set this to the repository's URL to show a "View on GitHub" button in the hero.
-  const REPO_URL = '';
+  const REPO_URL = 'https://github.com/iMahesh/superbar';
 
   if (REPO_URL) {
     const a = document.querySelector('#repo-link');
